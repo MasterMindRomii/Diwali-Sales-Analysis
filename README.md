@@ -20,3 +20,15 @@ Sales = pd.read_csv("C:\\Users\\Dell\\Desktop\\75 Day\\Diwali Sales Data.csv", e
 You can also use a raw string by prefixing the string with 'r'. This will treat the string as a raw string and won't interpret escape characters:
 Sales = pd.read_csv(r"C:\Users\Dell\Desktop\75 Day\Diwali Sales Data.csv", encoding='unicode_escape')
 
+
+2. i tried to copy "Fill_Amount=Copy(Sales)" and get an error of "---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[17], line 1
+----> 1 Fill_Amount=Copy(Sales)
+
+NameError: name 'Copy' is not defined"
+
+REASON- The error you're encountering, NameError: name 'Copy' is not defined, occurs because you are trying to use the Copy function without importing it from the appropriate module. 
+
+Solution- # Use the copy() method to create a copy of the 'Sales' DataFrame
+Fill_Amount = Sales.copy()
